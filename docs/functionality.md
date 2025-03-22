@@ -10,3 +10,7 @@
 - add date
 - add description
 - attach map or photos
+
+## Things to investigate
+- adding in maps that aren't static images
+- stylizing the maps
