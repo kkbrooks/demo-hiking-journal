@@ -1,0 +1,120 @@
+:root {
+  /* Light theme variables */
+  --background-color: #F2F6FD;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --card-background: #FCFDFF;
+  --button-primary: #0078D4;
+  --shadow: rgba(14, 17, 23, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1E1E1E;
+    --text-primary: #FFFFFF;
+    --text-secondary: #CCCCCC;
+    --card-background: #2D2D2D;
+    --button-primary: #0078D4;
+    --shadow: rgba(0, 0, 0, 0.3);
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  margin: 0;
+  font-family: 'PT Serif', serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  gap: 32px;
+}
+
+.title {
+  font-size: 60px;
+  line-height: 1.29;
+  font-weight: 400;
+  margin: 0;
+}
+
+.add-button {
+  background-color: var(--button-primary);
+  border: none;
+  border-radius: 32px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 8.6px 1px var(--shadow);
+}
+
+.add-button img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.journal-entry {
+  background-color: var(--card-background);
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;
+  max-width: 916px;
+  box-shadow: 0px 4px 8.6px 1px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.entry-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.entry-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 18px;
+  line-height: 1.29;
+}
+
+.entry-meta .separator {
+  font-weight: 700;
+}
+
+.entry-title {
+  font-size: 32px;
+  line-height: 1.17;
+  margin: 0;
+}
+
+.entry-content {
+  font-size: 16px;
+  line-height: 1.29;
+}
+
+.entry-image {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 400px;
+}
