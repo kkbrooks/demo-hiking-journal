@@ -4,7 +4,7 @@
     --color-text-primary: #333333;
     --color-text-secondary: #666666;
     --color-primary: #0078D4;
-    --color-white: #FFFFFF;
+    --color-journal-entry-background: rgba(255, 255, 255, 0.8);
     
     /* Shadow */
     --shadow-card: 0px 4px 8.6px 1px rgba(14, 17, 23, 0.1);
@@ -17,6 +17,9 @@
         --color-text-primary: #FFFFFF;
         --color-text-secondary: #CCCCCC;
         --color-primary: #4EA0E3;
+        --color-journal-entry-background: rgba(255, 255, 255, 0.04);
+        --color-white: #FFFFFF;
+    
     }
 }
 
@@ -77,7 +80,7 @@ h1 {
 
 /* Journal entry styles */
 .journal-entry {
-    background-color: var(--color-white);
+    background-color: var(--color-journal-entry-background);
     border-radius: 16px;
     padding: 20px;
     display: flex;
@@ -123,6 +126,10 @@ p {
     display: block;
 }
 
+.entry-spacing{
+    margin-bottom: 32px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     main {
@@ -139,5 +146,8 @@ p {
 
     .meta-info {
         font-size: 16px;
+    }
+    .entry-spacing{
+        margin-bottom: 20px;
     }
 }

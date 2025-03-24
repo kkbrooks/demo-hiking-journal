@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <main>
@@ -20,18 +21,26 @@
             </button>
         </header>
 
-        <article class="journal-entry">
-            <div class="entry-header">
-                <div class="meta-info">
-                    <span class="date">March 10, 2025</span>
-                    <span class="separator">|</span>
-                    <span class="location">2201 Imola Ave. Napa, CA 94559</span>
+        <div id="entries-container">
+            <!-- Entries will be dynamically inserted here -->
+        </div>
+
+        <!-- Template for journal entries -->
+        <template id="entry-template">
+            <article class="journal-entry entry-spacing">
+                <div class="entry-header">
+                    <div class="meta-info">
+                        <span class="date"></span>
+                        <span class="separator">|</span>
+                        <span class="location"></span>
+                    </div>
+                    <h2></h2>
                 </div>
-                <h2>Morning hike at Skyline Wilderness Park</h2>
-            </div>
-            <p>For my hike this morning I did the Skyline Trail and Manzanita Trail Loop. It was a beautiful morning without many other folks on the trail. I got to see a good view of the valley from up in the foothills. I ended my hike with a quick walk in the Martha Walker Native Habitat Garden.</p>
-            <img src="../journal-enteries/images/2025-March-10/map.png" alt="Trail map of the hike" class="entry-image">
-        </article>
+                <div class="content"></div>
+                <img class="entry-image" alt="">
+            </article>
+        </template>
     </main>
+    <script src="journal-loader.js"></script>
 </body>
 </html>
